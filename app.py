@@ -20,7 +20,7 @@ def Publish_IAQ():
         IAQ_Data = IAQ_Sensor.GetIAQ('/dev/ttyS1',1)
         client = mqtt.Client()
         client.on_connect
-        client.username_pw_set('fkvRuzah5rKvCb9mZbjG','XXX')
+        client.username_pw_set('TlCpEHdUJUTgiLNovuYO','XXX')
         client.connect('thingsboard.cloud', 1883, 60)
         TimeStamp = IAQ_Sensor.Current_ms()
         
@@ -48,7 +48,7 @@ def Publish_MaMainPower():
         #MQTT_Connect()
         client = mqtt.Client()
         client.on_connect
-        client.username_pw_set('2clQTjYgdQxFvuZqtjFI','')
+        client.username_pw_set('i4qe8Jbakwyt0rSeE4Ko','')
         print(client.connect('thingsboard.cloud', 1883, 60))
         TimeStamp = IAQ_Sensor.Current_ms()
         payload_MaPower = {"ts": TimeStamp,
@@ -89,7 +89,7 @@ def Publish_SubMaPower():
             #MQTT_Connect()
             clientsub = mqtt.Client()
             clientsub.on_connect
-            clientsub.username_pw_set('2clQTjYgdQxFvuZqtjFI','')
+            clientsub.username_pw_set('i4qe8Jbakwyt0rSeE4Ko','')
             print(clientsub.connect('thingsboard.cloud', 1883, 60))
             TimeStamp = IAQ_Sensor.Current_ms()
             payload_iaq = {"ts": TimeStamp,
@@ -137,7 +137,7 @@ def Publish_MbMainPower():
         #MQTT_Connect()
         client = mqtt.Client()
         client.on_connect
-        client.username_pw_set('2clQTjYgdQxFvuZqtjFI','')
+        client.username_pw_set('i4qe8Jbakwyt0rSeE4Ko','')
         print(client.connect('thingsboard.cloud', 1883, 60))
         TimeStamp = IAQ_Sensor.Current_ms()
         payload_MaPower = {"ts": TimeStamp,
@@ -178,7 +178,7 @@ def Publish_SubMbPower():
             #MQTT_Connect()
             clientsub = mqtt.Client()
             clientsub.on_connect
-            clientsub.username_pw_set('2clQTjYgdQxFvuZqtjFI','')
+            clientsub.username_pw_set('i4qe8Jbakwyt0rSeE4Ko','')
             print(clientsub.connect('thingsboard.cloud', 1883, 60))
             TimeStamp = IAQ_Sensor.Current_ms()
             payload_iaq = {"ts": TimeStamp,
